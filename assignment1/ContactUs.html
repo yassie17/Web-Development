@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>ContactUs</title>
+        <script src="Assignment1.js"></script>
+        <link rel="stylesheet" type="text/css" href="Assignment1.css">
+    </head>
+    <body class="body4">
+        <div class="div4">
+            <form name="ContactUs" action="Home.html" onsubmit="return ContactUsValidate()" method="post">            
+                <label class="l4">First Name</label>
+                <br>
+                <input type="text" class="in4" placeholder="First Name" name="fn" id="f">
+                <div class="d4" id="fnerror"></div>
+                <br>
+                <label class="l4">Last Name</label>
+                <br>
+                <input type="text" class="in4" placeholder="Last Name" name="ln" id="l">
+                <div class="d4" id="lnerror"></div>
+                <br>
+                <label class="l4">Leave a message</label>
+                <br>
+                <textarea class="in41" placeholder="Leave a message" name="mess" id="c"></textarea>
+                <div class="d4" id="texterror"></div>
+                <br>
+                <input class="b4" type="submit" value="Submit" name="Submit">
+            </form>
+        </div>
+    </body>
+</html>

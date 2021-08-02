@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>SignUp</title>
+        <script src="Assignment1.js"></script>
+        <link rel="stylesheet" type="text/css" href="Assignment1.css">
+    </head>
+  
+    <body class="body1">
+        <div class = "div1">
+            <h2>Sign Up</h2>
+            <h5>Please fill in this form to create an account</h5>
+            <form name="SignUp" action="Home.html" onsubmit="return SignUpValidate()" method="post">            
+                <label class="l1">Email</label>
+                <br>
+                <input type="text" name="Email" class="in1" placeholder="Enter Email" id="m">
+                <div class = "d1" id="merror"></div>
+                <br>
+                <label class="l1">Password</label>
+                <br>
+                <input type="password" name="Pass" class="in1" placeholder="Enter Password" id="p">
+                <div class = "d1" id="perror"></div>
+                <br>
+                <label class="l1">Repeat Password</label>
+                <br>
+                <input type="password" name="RPass" class="in1" placeholder="Repeat Password" id="r">
+                <div class = "d1" id="rperror"></div>
+                <br>
+                <input class="b1" type="submit" value="Sign Up" name="Submit">
+                <input class="checker" type="checkbox" value="Show Password" onclick="Password()">
+                <div class="show">Show Password</div>
+            </form>
+        </div>
+    </body>
+</html>
