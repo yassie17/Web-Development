@@ -1,0 +1,61 @@
+body{
+    background-image: url('sky.jpeg');
+    background-size: 100%;
+}
+button{
+    margin-left: 40%;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    background-color: transparent;
+}
+
+.B1{
+    margin-top: 170px;
+    color: cornflowerblue;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+}
+
+.B2{
+    margin-top: 570px;
+    color: navy;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: white;
+}
+
+.B1:hover{
+    font-size: 35px;
+    color: navy;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: white;
+}
+
+.B2:hover{
+    font-size: 35px;
+    color: cornflowerblue;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+}
+
+.D1{
+    margin: 0;
+    position:absolute;
+    top: 30%;
+    left: 25%
+}
+
+.D2{
+    background-color: white;
+    margin: 0;
+    position:absolute;
+    top: 30%;
+    left: 55%
+}
+
+canvas{
+    border: 1px solid black;
+}
+

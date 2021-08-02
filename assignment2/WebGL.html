@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>WebGL</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="three.min.js"></script>
+        <style>
+            canvas { 
+                width: 100%; 
+                height: 100%;
+                background: url('garden.jpeg');
+                background-size: 100%;
+                }
+            </style>
+    </head>
+    <body>
+        <script>
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            var cubegeometry = new THREE.CubeGeometry(1,0.25,1);
+            var cubematerial = new THREE.MeshBasicMaterial({wireframe: false, color: 0x000000});
+            var cube = new THREE.Mesh(cubegeometry, cubematerial);
+            cube.position.y = -0.6;
+            scene.add(cube);
+            camera.position.z = 5;
+            camera.position.y = 0.5;
+            var cub1geometry = new THREE.CubeGeometry(4.5,0.1,0.1);
+            var cub1material = new THREE.MeshBasicMaterial({wireframe: false, color: 0x5E2C04});
+            var cub1 = new THREE.Mesh(cub1geometry, cub1material);
+            cub1.position.y = -0.7;
+            cub1.position.z = 2.2;
+            scene.add(cub1);
+            var cub2 = new THREE.Mesh(cub1geometry, cub1material);
+            cub2.position.y = -0.7;
+            cub2.position.z = -2.2;
+            scene.add(cub2);
+            var cub2geometry = new THREE.CubeGeometry(0.1,0.1,4.5);
+            var cub2material = new THREE.MeshBasicMaterial({wireframe: false, color: 0x5E2C04});
+            var cub3 = new THREE.Mesh(cub2geometry, cub2material);
+            cub3.position.y = -0.7;
+            cub3.position.x = -2.2;
+            scene.add(cub3);
+            var cub4 = new THREE.Mesh(cub2geometry, cub2material);
+            cub4.position.y = -0.7;
+            cub4.position.x = 2.2;
+            scene.add(cub4);
+            var cub5 = new THREE.Mesh(cub1geometry, cub1material);
+            cub5.position.z = 2.2;
+            scene.add(cub5);
+            var cub6 = new THREE.Mesh(cub1geometry, cub1material);
+            cub6.position.z = -2.2;
+            scene.add(cub6);
+            var cub7 = new THREE.Mesh(cub2geometry, cub2material);
+            cub7.position.x = -2.2;
+            scene.add(cub7);
+            var cub8 = new THREE.Mesh(cub2geometry, cub2material);
+            cub8.position.x = 2.2;
+            scene.add(cub8);
+            var cub9 = new THREE.Mesh(cub1geometry, cub1material);
+            cub9.position.y = -0.35;
+            cub9.position.z = 2.2;
+            scene.add(cub9);
+            var cub10 = new THREE.Mesh(cub1geometry, cub1material);
+            cub10.position.y = -0.35;
+            cub10.position.z = -2.2;
+            scene.add(cub10);
+            var cub11 = new THREE.Mesh(cub2geometry, cub2material);
+            cub11.position.y = -0.35;
+            cub11.position.x = -2.2;
+            scene.add(cub11);
+            var cub12 = new THREE.Mesh(cub2geometry, cub2material);
+            cub12.position.y = -0.35;
+            cub12.position.x = 2.2;
+            scene.add(cub12);
+            var cub3geometry = new THREE.CubeGeometry(0.1,0.85,0.1);
+            var cub3material = new THREE.MeshBasicMaterial({wireframe: false, color: 0x5E2C04});
+            var cub13 = new THREE.Mesh(cub3geometry, cub3material);
+            cub13.position.y = -0.329;
+            cub13.position.x = -2.25;
+            cub13.position.z = 2.2;
+            scene.add(cub13);
+            var cub14 = new THREE.Mesh(cub3geometry, cub3material);
+            cub14.position.y = -0.329;
+            cub14.position.x = 2.25;
+            cub14.position.z = 2.2;
+            scene.add(cub14);
+            var cub15 = new THREE.Mesh(cub3geometry, cub3material);
+            cub15.position.y = -0.329;
+            cub15.position.x = -2.25;
+            cub15.position.z = -2.2;
+            scene.add(cub15);
+            var cub16 = new THREE.Mesh(cub3geometry, cub3material);
+            cub16.position.y = -0.329;
+            cub16.position.x = 2.25;
+            cub16.position.z = -2.2;
+            scene.add(cub16);
+            var cub17 = new THREE.Mesh(cub3geometry, cub3material);
+            cub17.position.y = -0.329;
+            cub17.position.z = 2.2;
+            scene.add(cub17);
+            var cub18 = new THREE.Mesh(cub3geometry, cub3material);
+            cub18.position.y = -0.329;
+            cub18.position.z = -2.2;
+            scene.add(cub18);
+            var cub19 = new THREE.Mesh(cub3geometry, cub3material);
+            cub19.position.y = -0.329;
+            cub19.position.x = 2.25;
+            cub19.position.z = 0.25;
+            scene.add(cub19);
+            var cub20 = new THREE.Mesh(cub3geometry, cub3material);
+            cub20.position.y = -0.329;
+            cub20.position.x = -2.25;
+            cub20.position.z = 0.25;
+            scene.add(cub20);
+            var cylindergeometry = new THREE.CylinderGeometry(0.05, 0.05, 3, 50, false);
+            var cylindermaterial = new THREE.MeshBasicMaterial({wireframe: false, color: 0x333333});
+            var cylinder = new THREE.Mesh(cylindergeometry, cylindermaterial);
+            cylinder.position.y = 1;
+            scene.add(cylinder);
+            var conegeometry = new THREE.CylinderGeometry(0, 2, 0.6, 50, false);
+            var conematerial = new THREE.MeshBasicMaterial({wireframe: false, color: 0xD3C380});
+            var cone = new THREE.Mesh(conegeometry, conematerial);
+            cone.rotation.x = Math.PI / 6;
+            cone.position.y = 2.5;
+            scene.add(cone);
+
+            var render = function () {
+                requestAnimationFrame(render);
+                cube.rotation.y += 0.01;
+                cone.rotation.y -= 0.01;
+                renderer.render(scene, camera);
+            };
+            $(document).keydown(function(event){
+                switch(event.which){
+                    case 37: camera.position.x+=0.1; break;
+                    case 38: camera.position.y-=0.1; break;
+                    case 39: camera.position.x-=0.1; break;
+                    case 40: camera.position.y+=0.1; break;
+                }
+                switch(event.key){
+                    case 'w': camera.position.z+=0.1; break;
+                    case 's': camera.position.z-=0.1; break;
+                    case 'a': camera.rotation.z-=0.1; break;
+                    case 'd': camera.rotation.z+=0.1; break;
+                }
+        })
+            render();
+        </script>
+    </body>
+</html>
